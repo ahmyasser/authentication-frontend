@@ -1,24 +1,42 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "react-toastify/dist/ReactToastify.css";
+import "./App.css";
+
+import { ToastContainer } from "react-toastify";
+
+import HomeScreen from "./Screens/HomeScreen";
+import LoginScreen from "./Screens/LoginScreen";
+import SignupScreen from "./Screens/SignupScreen";
+
+import { SCREENS } from "./Constants";
+import { useScreen } from "./Contexts/ScreenContext";
 
 function App() {
+  const { screen } = useScreen();
+
+  const renderScreen = () => {
+    switch (screen) {
+      case SCREENS.SIGNUP:
+        return <SignupScreen />;
+      case SCREENS.LOGIN:
+        return <LoginScreen />;
+      case SCREENS.HOME:
+        return <HomeScreen />;
+      default:
+        return null;
+    }
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <header className="App-header">{renderScreen()}</header>
+      <ToastContainer
+        position="bottom-center"
+        autoClose={5000}
+        hideProgressBar
+        style={{
+          fontSize: "0.8rem",
+        }}
+      />
     </div>
   );
 }

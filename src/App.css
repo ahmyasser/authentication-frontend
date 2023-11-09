@@ -3,8 +3,10 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 20vh;
   pointer-events: none;
+  margin-bottom: 20px;
+  margin-top: -20px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -14,19 +16,16 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: whitesmoke;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
 @keyframes App-logo-spin {
   from {
@@ -35,4 +34,97 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* src/App.css */
+
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+.signup-screen {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 25rem;
+  height: 25rem;
+  max-width: 80vw;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.3);
+}
+
+.signup-screen h2 {
+  margin-bottom: 3rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 20rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  margin-right: 5px;
+  font-size: 1rem;
+}
+
+.form-group input {
+  width: 14rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: black;
+  color: whitesmoke;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.link {
+  color: #0056b3;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.small {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+.invalid {
+  border: 2px solid red;
+}
+
+.error {
+  color: red;
+  font-size: 0.8rem;
+  height: 2.2rem;
+  margin-top: -1rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  width: 20rem;
 }
