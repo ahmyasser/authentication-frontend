@@ -17,14 +17,6 @@ function Home() {
     <div className="App-header">
       <div>
         <h2>hi {user} </h2>
-        <button
-          type="submit"
-          onClick={() => {
-            changeUser(null);
-          }}
-        >
-          Sign Out
-        </button>
       </div>
       <div className="flex">
         <ThreatFactorCalculator onUpdate={setThreat} />
@@ -37,6 +29,17 @@ function Home() {
         <span className="result">Likelihoood Factor: {threat / 2 + v / 2}</span>
         <span className="result">Impact Factor: {tech / 2 + b / 2}</span>
       </div>
+      <div className="container-sign-out">
+      <button
+        type="submit"
+        onClick={() => {
+          changeUser(null);
+        }}
+      >
+        Sign Out
+      </button>
+      </div>
+      
     </div>
   );
 }

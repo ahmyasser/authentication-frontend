@@ -26,7 +26,17 @@
   font-size: calc(10px + 2vmin);
   color: black;
 }
-
+.App-header button {
+  width: 15 rem;
+  padding: 10px;
+}
+.container-sign-out {
+  display: flex;
+  width:90%;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-top:40px;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -139,19 +149,29 @@ button:hover {
   font-size: medium;
 }
 .dropdown {
-  font-size: 13px;
+  font-size: 14px;
+  height: 3.5rem;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 23vw;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+.dropdown select {
+  width: 90%;
+  height: 1.8rem;
 }
 .w-full {
-  width: 100%;
-  gap:10px;
+  width: 90%;
+  gap: 10px;
 }
 .result {
   background-color: black;
   color: #ccc;
-  padding: 8px;
+  padding: 8px 0;
   margin-top: 10px;
   border-radius: 8px;
-  width: 80%;
+  width: 90%;
 }
